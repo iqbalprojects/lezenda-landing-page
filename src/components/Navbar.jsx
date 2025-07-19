@@ -7,56 +7,40 @@ import Image from "next/image";
 import Link from "next/link";
 import { X } from "lucide-react";
 
+const navItems = [
+    {
+        title: "Contact Us",
+        url: "#contact-us",
+    },
+];
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-
     return (
-        <nav className="p-4 relative z-50">
+        <nav className="px-5 py-[18.5px] relative z-50">
             <div className="container mx-auto flex justify-between items-center">
                 <Link href="/" className="text-white hover:text-gray-400">
                     <Image
                         src="/lezenda.png"
-                        width={100}
-                        height={100}
+                        width={92}
+                        height={15}
                         alt="Lezenda Logo"
                     />
                 </Link>
-                <button onClick={() => setIsOpen(true)}>
+                <button className="md:hidden" onClick={() => setIsOpen(true)}>
                     <MenuIcon />
                 </button>
-                <ul className="hidden md:flex space-x-4">
-                    <li>
-                        <a
-                            href="#home"
-                            className="text-white hover:text-gray-400"
-                        >
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#about"
-                            className="text-white hover:text-gray-400"
-                        >
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#services"
-                            className="text-white hover:text-gray-400"
-                        >
-                            Services
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#contact"
-                            className="text-white hover:text-gray-400"
-                        >
-                            Contact
-                        </a>
-                    </li>
+                <ul className="hidden md:flex space-x-4 ">
+                    {navItems.map((nav, index) => (
+                        <li key={index}>
+                            <Link
+                                href={nav.url}
+                                className="hover:text-gray-400"
+                            >
+                                {nav.title}
+                            </Link>
+                        </li>
+                    ))}
                 </ul>
             </div>
 
@@ -85,33 +69,17 @@ const Navbar = () => {
                                 <X className="w-6 h-6 text-gray-700" />
                             </button>
                             <ul className="flex flex-col space-y-4">
-                                <li>
-                                    <Link
-                                        href="#"
-                                        className="text-gray-800 hover:text-blue-500"
-                                        onClick={() => setIsOpen(false)}
-                                    >
-                                        About
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href="#"
-                                        className="text-gray-800 hover:text-blue-500"
-                                        onClick={() => setIsOpen(false)}
-                                    >
-                                        Services
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href="#"
-                                        className="text-gray-800 hover:text-blue-500"
-                                        onClick={() => setIsOpen(false)}
-                                    >
-                                        Contact us
-                                    </Link>
-                                </li>
+                                {navItems.map((nav, index) => (
+                                    <li key={index}>
+                                        <Link
+                                            href={nav.url}
+                                            className="text-gray-800 hover:text-blue-500"
+                                            onClick={() => setIsOpen(false)}
+                                        >
+                                            {nav.title}
+                                        </Link>
+                                    </li>
+                                ))}
                             </ul>
                         </motion.div>
                     </>

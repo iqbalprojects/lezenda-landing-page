@@ -1,4 +1,5 @@
 import Image from "next/image";
+import StampOnView from "./StampSpan";
 
 const proccessList = [
     {
@@ -35,45 +36,69 @@ const Proccess = () => {
                 <h3 className="font-caveat text-[22px] text-blue-600 tracking-[-1px]">
                     The process
                 </h3>
-                <h2 className="font-bold text-3xl leading-[38px] tracking-[-0.6px]">
+                <h2 className="font-bold text-3xl leading-[38px] tracking-[-0.6px] text-[#1D2146]">
                     We help businesses
-                    <span className="block mx-auto my-1.5 outline-4 outline-indigo-100 bg-indigo-900 py-0.5 px-2.5 w-fit -rotate-[2.8deg] rounded-lg text-white font-semibold text-[28px] leading-[38px] tracking-[-0.6px]">
-                        🚀 in every step
-                    </span>
-                    of their growth
+                    <div className="flex flex-col md:flex-row justify-center gap-x-2 md:mt-1 text-[#1D2146]">
+                        <StampOnView className="mx-auto my-1.5 outline-4 outline-indigo-100 bg-[#242A63] py-0.5 px-2.5 w-fit -rotate-[2.8deg] rounded-lg text-white font-semibold text-[28px] leading-[38px] tracking-[-0.6px]">
+                            🚀 in every step
+                        </StampOnView>
+                        of their growth
+                    </div>
                 </h2>
             </div>
-            <Image
-                src="/proccess.png"
-                width={350}
-                height={280.8}
-                alt="Illustration Proccess"
-            />
-
-            <ul className="relative flex flex-col gap-y-10">
-                <div className="absolute -z-10 right-1/2 translate-x-1/2 top-0 h-full border border-dashed border-neutral-300"></div>
-                {proccessList.map((item, index) => (
-                    <li
-                        key={index}
-                        className="relative space-y-4 bg-neutral-50 rounded-[20px] shadow-[1px_1px_1px_0px_#00000026,-0.5px_1px_1px_0px_#0000001A] p-5"
-                    >
-                        <p className="text-black/10 font-bold text-3xl leading-[38px] tracking-[-0.6px]">
-                            0{index + 1}
-                        </p>
-                        <div className="space-y-0.5">
-                            <h5 className="font-semibold text-lg leading-[140%]">
-                                {item.title}
-                            </h5>
-                            <p className="leading-5 tracking-[-0.1px]">
-                                {item.description}
+            <div className="flex flex-col items-center gap-y-10">
+                <Image
+                    src="/proccess.png"
+                    width={350}
+                    height={280.8}
+                    alt="Illustration Proccess"
+                    className="block md:hidden"
+                />
+                <ul className="relative grid md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-10">
+                    {proccessList.map((item, index) => (
+                        <li
+                            key={index}
+                            className="relative flex flex-col justify-between space-y-4 h-72 bg-neutral-50 rounded-[20px] shadow-[1px_1px_1px_0px_#00000026,-0.5px_1px_1px_0px_#0000001A] p-7"
+                        >
+                            <p className="text-black/10 font-bold text-5xl leading-[38px] tracking-[-0.6px]">
+                                0{index + 1}
                             </p>
-                        </div>
-                        {index !== 0 && (
-                            <i className="absolute bottom-full right-1/2 translate-1/2 w-2 h-2 rounded-full bg-neutral-300"></i>
-                        )}
-                    </li>
-                ))}
-            </ul>
+                            <div className="space-y-0.5">
+                                <h5 className="font-semibold text-lg md:text-2xl leading-[140%]">
+                                    {item.title}
+                                </h5>
+                                <p className="leading-5 md:text-base tracking-[-0.1px]">
+                                    {item.description}
+                                </p>
+                            </div>
+
+                            {index !== 0 && (
+                                <i className="absolute top-0 -translate-y-0.5 right-1/2 md:right-full md:top-1/2 translate-x-1/2 md:-translate-y-1/2 w-2 h-2 rounded-full bg-neutral-300"></i>
+                            )}
+
+                            {index !== proccessList.length - 1 && (
+                                <span className="absolute left-1/2 top-full h-10 w-0.5 border-l border-dashed border-neutral-300 transform -translate-x-1/2 md:hidden" />
+                            )}
+
+                            {index < proccessList.length - 1 &&
+                                index % 2 === 0 && (
+                                    <span className="hidden md:block absolute top-1/2 left-full w-10 border-t border-dashed border-neutral-300" />
+                                )}
+                        </li>
+                    ))}
+
+                    {proccessList.length % 2 !== 0 && (
+                        <li className="hidden md:flex justify-center items-center">
+                            <Image
+                                src="/proccess.png"
+                                width={350}
+                                height={280.8}
+                                alt="Illustration Proccess"
+                            />
+                        </li>
+                    )}
+                </ul>
+            </div>
         </section>
     );
 };
