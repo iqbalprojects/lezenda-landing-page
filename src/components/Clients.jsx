@@ -40,7 +40,7 @@ const clientsList = [
 
 const Clients = () => {
     return (
-        <section className="relative p-5 rounded-[20px] shadow-[1px_1px_1px_0px_#00000026,-0.5px_1px_1px_0px_#0000001A]">
+        <section className="relative p-5 mb-[52px] rounded-[20px] shadow-[1px_1px_1px_0px_#00000026,-0.5px_1px_1px_0px_#0000001A]">
             <Image
                 src="/pinned.png"
                 width={71.3}

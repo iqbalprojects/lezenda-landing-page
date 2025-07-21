@@ -69,6 +69,7 @@ const Advantages = () => {
                         <AnimatedContent
                             mixBlend={false}
                             direction="horizontal"
+                            hoverRotate={4}
                         >
                             <li className="relative bg-[#353B6C] rounded-xl py-6 pl-6 -rotate-2">
                                 <Image
@@ -102,6 +103,9 @@ const Advantages = () => {
                                 direction="horizontal"
                                 reverse
                                 mixBlend={false}
+                                hoverTranslate={{ x: 0, y: -10 }}
+                                hoverDuration={0.4}
+                                hoverEase="back.out(1.7)"
                             >
                                 <li className="relative bg-[#2E3361] rounded-xl px-7 pt-7 rotate-[2.5deg] lg:-rotate-3 flex flex-col md:flex-row items-center h-full text-center md:text-left">
                                     <Image
@@ -135,6 +139,9 @@ const Advantages = () => {
                         <AnimatedContent
                             direction="horizontal"
                             mixBlend={false}
+                            hoverTranslate={{ x: 0, y: -10 }}
+                            hoverDuration={0.4}
+                            hoverEase="back.out(1.7)"
                         >
                             <li className="bg-[#51D2FD] flex flex-col justify-between space-y-2.5 text-black/50 rounded-xl p-6 md:p-9 -rotate-[2.28deg] lg:rotate-3">
                                 <h3 className="font-bold text-4xl md:text-6xl leading-[120%] tracking-[-0.8px]">
@@ -156,6 +163,9 @@ const Advantages = () => {
                             direction="horizontal"
                             reverse
                             mixBlend={false}
+                            hoverTranslate={{ x: 0, y: -10 }}
+                            hoverDuration={0.4}
+                            hoverEase="back.out(1.7)"
                         >
                             <li className="bg-[#292C4F] space-y-2 rounded-xl p-6 rotate-2 lg:rotate-0">
                                 <ChartIcon className="-rotate-2" />
@@ -174,6 +184,9 @@ const Advantages = () => {
                             <AnimatedContent
                                 direction="horizontal"
                                 mixBlend={false}
+                                hoverTranslate={{ x: 0, y: -10 }}
+                                hoverDuration={0.4}
+                                hoverEase="back.out(1.7)"
                             >
                                 <li className="bg-[#464D87] pb-6 flex flex-col lg:flex-row items-center gap-y-1.5 rounded-xl px-6 pt-6 -rotate-[1.56deg] lg:w-full lg:h-[288px]">
                                     <div className="lg:order-1 lg:pr-6 lg:text-left">

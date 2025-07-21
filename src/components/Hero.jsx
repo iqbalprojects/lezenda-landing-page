@@ -16,7 +16,7 @@ const taglineItems = [
 
 const Hero = () => {
     return (
-        <section className="relative flex flex-col items-center text-center pt-[72px] md:pt-[104px] pb-2 md:pb-3.5 lg:pb-5 overflow-y-clip">
+        <section className="relative flex flex-col items-center text-center pt-[72px] md:pt-[104px] pb-2 md:pb-3.5 2xl:pb-7 lg:pb-5 overflow-y-clip">
             <AnimatedContent
                 direction="horizontal"
                 reverse={true}
@@ -107,7 +107,14 @@ const Hero = () => {
                     width={190.83}
                     height={228.8}
                     alt="Notes"
-                    className="absolute -top-28 md:-top-14 -right-[6.6rem] -rotate-[6.89deg]"
+                    className="lg:hidden absolute -top-28 md:-top-14 -right-[6.6rem] -rotate-[6.89deg]"
+                />
+                <Image
+                    src="/notes-desktop.png"
+                    width={407}
+                    height={488}
+                    alt="Notes"
+                    className="hidden lg:block absolute -top-32 -right-[6.6rem]"
                 />
                 <Image
                     src="/google.png"
@@ -138,14 +145,14 @@ const Hero = () => {
                         width={90.76}
                         height={90.76}
                         alt="Clipped Shadow"
-                        className="absolute top-96 -translate-y-6 -right-[3.2rem] -rotate-[61.44deg]"
+                        className="absolute top-96 -translate-y-6 xl:-translate-y-8 -right-[3.2rem] -rotate-[61.44deg]"
                     />
                     <Image
                         src="/clipped-full-shadow-desktop.png"
                         width={90.76}
                         height={90.76}
                         alt="Clipped Shadow"
-                        className="absolute top-96 translate-y-7 -right-12 md:-right-8 -rotate-[38.74deg]"
+                        className="absolute top-96 translate-y-7 xl:translate-y-4 -right-12 md:-right-8 -rotate-[38.74deg]"
                     />
                 </div>
             </AnimatedContent>
@@ -168,7 +175,7 @@ const Hero = () => {
                     width={192.16}
                     height={235.51}
                     alt="Watch"
-                    className="hidden lg:block absolute top-72 -translate-y-8 right-20 rotate-[10.81deg]"
+                    className="hidden lg:block absolute top-72 -translate-y-8 xl:-translate-y-10 right-20 rotate-[10.81deg]"
                 />
                 <div className="lg:hidden absolute top-96 translate-y-[5.5rem] md:translate-y-1 -left-5 md:left-8 h-24 overflow-hidden">
                     <Image
@@ -179,7 +186,7 @@ const Hero = () => {
                         className="-rotate-[7.34deg]"
                     />
                 </div>
-                <div className="hidden lg:block absolute top-96 -translate-y-2 left-12 h-28 overflow-hidden">
+                <div className="hidden lg:block absolute top-96 -translate-y-2 left-12 h-28 xl:h-32 overflow-hidden">
                     <Image
                         src="/sticky-notes-desktop.png"
                         width={493.73}

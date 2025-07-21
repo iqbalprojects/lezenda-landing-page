@@ -21,6 +21,9 @@ const AnimatedContent = ({
     delay = 0,
     onComplete,
     hoverRotate,
+    hoverTranslate,
+    hoverDuration = 0.3,
+    hoverEase = "power2.out",
 }) => {
     const ref = useRef(null);
 
@@ -55,21 +58,61 @@ const AnimatedContent = ({
         });
 
         const handleEnter = () => {
+            const hoverProps = {};
+
             if (hoverRotate !== undefined) {
+                hoverProps.rotate = hoverRotate;
+            }
+
+            if (hoverTranslate) {
+                if (typeof hoverTranslate === "number") {
+                    // Single number means translate up
+                    hoverProps.y = -hoverTranslate;
+                } else if (typeof hoverTranslate === "object") {
+                    // Object with x, y, or both
+                    if (hoverTranslate.x !== undefined) {
+                        hoverProps.x = hoverTranslate.x;
+                    }
+                    if (hoverTranslate.y !== undefined) {
+                        hoverProps.y = hoverTranslate.y;
+                    }
+                }
+            }
+
+            if (Object.keys(hoverProps).length > 0) {
                 gsap.to(el, {
-                    rotate: hoverRotate,
-                    duration: 0.3,
-                    ease: "power2.out",
+                    ...hoverProps,
+                    duration: hoverDuration,
+                    ease: hoverEase,
                 });
             }
         };
 
         const handleLeave = () => {
+            const resetProps = {};
+
             if (hoverRotate !== undefined) {
+                resetProps.rotate = 0;
+            }
+
+            if (hoverTranslate) {
+                if (typeof hoverTranslate === "number") {
+                    resetProps.y = 0;
+                } else if (typeof hoverTranslate === "object") {
+                    if (hoverTranslate.x !== undefined) {
+                        resetProps.x = 0;
+                    }
+                    if (hoverTranslate.y !== undefined) {
+                        resetProps.y = 0;
+                    }
+                }
+            }
+
+            if (Object.keys(resetProps).length > 0) {
                 gsap.to(el, {
-                    rotate: 0,
-                    duration: 0.3,
-                    ease: "power2.out",
+                    ...resetProps,
+                    duration: hoverDuration,
+                    ease: hoverEase,
                 });
             }
         };
@@ -94,7 +137,12 @@ const AnimatedContent = ({
         threshold,
         delay,
         onComplete,
+        hoverRotate,
+        hoverTranslate,
+        hoverDuration,
+        hoverEase,
     ]);
+
     return (
         <div
             ref={ref}

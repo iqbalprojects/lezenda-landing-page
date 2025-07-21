@@ -7,18 +7,18 @@ const Contact = () => {
             <div className="relative">
                 <div className="hidden md:block">
                     <ul className="flex flex-col gap-y-[72px] divide-y divide-white/5">
-                        {[...Array(6)].map((_, index) => (
+                        {[...Array(8)].map((_, index) => (
                             <li key={index}></li>
                         ))}
                     </ul>
-                    <ul className="absolute top-0 flex gap-x-20 divide-x h-screen divide-white/5">
-                        {[...Array(12)].map((_, index) => (
+                    <ul className="absolute top-0 flex gap-x-24 divide-x h-screen divide-white/5">
+                        {[...Array(15)].map((_, index) => (
                             <li key={index}></li>
                         ))}
                     </ul>
                 </div>
-                <div className="md:absolute top-1 p-8 flex flex-col text-center md:text-start md:flex-row md:items-center">
-                    <div>
+                <div className="md:absolute top-1 p-8 pb-14 md:p-14 lg:p-[88px] flex flex-col text-center items-center md:text-start md:flex-row md:w-full md:justify-between md:items-center">
+                    <div className="max-w-[360px]">
                         <h2 className="text-3xl md:text-5xl font-semibold leading-[38px] md:leading-[135%] tracking-[-0.6px] md:tracking-[-0.8px] mb-3 text-white">
                             Ready to Scale Smarter?
                         </h2>
@@ -38,7 +38,7 @@ const Contact = () => {
                         width={286}
                         height={211.56}
                         alt="Contact Us"
-                        className="scale-[130%] -translate-y-6"
+                        className="scale-150 xl:scale-200 xl:-translate-x-20"
                     />
                 </div>
             </div>

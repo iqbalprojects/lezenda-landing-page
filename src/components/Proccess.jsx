@@ -58,9 +58,9 @@ const Proccess = () => {
                     {proccessList.map((item, index) => (
                         <li
                             key={index}
-                            className="relative flex flex-col justify-between space-y-4 h-72 bg-neutral-50 rounded-[20px] shadow-[1px_1px_1px_0px_#00000026,-0.5px_1px_1px_0px_#0000001A] p-7"
+                            className="relative flex flex-col justify-between gap-y-4 md:h-72 bg-neutral-50 rounded-[20px] shadow-[1px_1px_1px_0px_#00000026,-0.5px_1px_1px_0px_#0000001A] p-7"
                         >
-                            <p className="text-black/10 font-bold text-5xl leading-[38px] tracking-[-0.6px]">
+                            <p className="text-black/10 font-bold text-3xl md:text-5xl leading-[38px] tracking-[-0.6px]">
                                 0{index + 1}
                             </p>
                             <div className="space-y-0.5">
