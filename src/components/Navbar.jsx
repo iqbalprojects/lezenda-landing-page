@@ -17,14 +17,15 @@ const navItems = [
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <nav className="px-5 py-[18.5px] relative z-50">
-            <div className="container mx-auto flex justify-between items-center">
+        <nav className="px-5 xl:px-[140px] py-[18.5px] xl:py-[29px] relative z-50">
+            <div className="flex justify-between items-center">
                 <Link href="/" className="text-white hover:text-gray-400">
                     <Image
                         src="/lezenda.png"
-                        width={92}
-                        height={15}
+                        width={107}
+                        height={18}
                         alt="Lezenda Logo"
+                        sizes="(max-width: 767px) 92px, 107px"
                     />
                 </Link>
                 <button className="md:hidden" onClick={() => setIsOpen(true)}>
@@ -35,7 +36,7 @@ const Navbar = () => {
                         <li key={index}>
                             <Link
                                 href={nav.url}
-                                className="hover:text-gray-400"
+                                className="hover:text-gray-400 font-medium"
                             >
                                 {nav.title}
                             </Link>
