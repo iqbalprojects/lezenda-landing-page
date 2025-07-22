@@ -127,7 +127,7 @@ const Services = () => {
     };
 
     return (
-        <section className="space-y-10 relative flex flex-col items-center">
+        <section className="relative flex flex-col gap-y-10 my-[52px] items-center">
             <motion.div
                 className="hidden md:block absolute top-0 left-0"
                 initial={{ x: -100, opacity: 0 }}
@@ -144,21 +144,22 @@ const Services = () => {
                 </h3>
                 <h2 className="font-bold text-3xl leading-[38px] tracking-[-0.6px]">
                     Complete end to end
-                    <StampOnView className="block mx-auto my-1.5 outline-4 outline-indigo-100 bg-indigo-900 py-0.5 px-2.5 w-fit -rotate-[2.8deg] rounded-lg text-white font-semibold text-[28px] leading-[38px] tracking-[-0.6px]">
+                    <StampOnView className="block mx-auto my-1.5 outline-4 outline-indigo-100 bg-indigo-900 py-0.5 px-2.5 w-fit rounded-lg text-white font-semibold text-[28px] leading-[38px] tracking-[-0.6px]">
                         🌐 digital solutions
                     </StampOnView>
                 </h2>
             </div>
-            <ul className="md:hidden space-y-5">
+            <ul className="md:hidden space-y-5 w-full">
                 {servicesList.map((service, index) => {
                     const isOpen = isOpenStates[index];
                     return (
                         <li
                             key={index}
                             className="px-4 pt-2 py-4 bg-neutral-50 rounded-xl border border-slate-100"
+                            onClick={() => toggleOpen(index)}
                         >
                             <div className="flex items-center justify-between">
-                                <h2 className="font-semibold text-lg leading-[140%]">
+                                <h2 className="font-semibold text-lg leading-[140%] max-w-40">
                                     {service.heading}
                                 </h2>
                                 <div className="flex items-center gap-x-2">
@@ -167,11 +168,9 @@ const Services = () => {
                                         width={90}
                                         height={108}
                                         alt="Services Illustration"
+                                        className="mix-blend-multiply"
                                     />
-                                    <button
-                                        className="bg-blue-100 rounded-full w-6 h-6 grid place-content-center transition-transform"
-                                        onClick={() => toggleOpen(index)}
-                                    >
+                                    <button className="bg-blue-100 shrink-0 rounded-full w-6 h-6 grid place-content-center transition-transform">
                                         <motion.div
                                             animate={{
                                                 rotate: isOpen ? 180 : 0,
@@ -311,7 +310,7 @@ const Services = () => {
                                         width={216}
                                         height={202}
                                         alt={service.heading}
-                                        className="w-[216px] h-[202px] object-cover"
+                                        className="w-[216px] h-[202px] object-contain"
                                     />
                                 )}
                             </li>

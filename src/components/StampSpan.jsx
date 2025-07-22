@@ -1,10 +1,9 @@
 // components/StampOnView.jsx
 "use client";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 
 const StampOnView = ({ children, className = "" }) => {
     const elementRef = useRef(null);
-    const [hasAnimated, setHasAnimated] = useState(false);
 
     useEffect(() => {
         const currentElement = elementRef.current;
@@ -12,16 +11,19 @@ const StampOnView = ({ children, className = "" }) => {
         if (!currentElement) return;
 
         const observerOptions = {
-            root: null, // viewport
+            root: null,
             rootMargin: "0px",
-            threshold: 0.5, // Trigger when 50% of the element is visible
+            threshold: 0.5,
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                if (entry.isIntersecting && !hasAnimated) {
-                    setHasAnimated(true);
-                    observer.unobserve(entry.target);
+                if (entry.isIntersecting) {
+                    currentElement.classList.add("stamp-effect");
+                    currentElement.classList.remove("hidden-before-animation");
+                } else {
+                    currentElement.classList.remove("stamp-effect");
+                    currentElement.classList.add("hidden-before-animation");
                 }
             });
         }, observerOptions);
@@ -34,15 +36,12 @@ const StampOnView = ({ children, className = "" }) => {
             }
             observer.disconnect();
         };
-    }, [hasAnimated]);
+    }, []);
 
     return (
         <span
             ref={elementRef}
-            // Use the global class names directly as strings
-            className={`${
-                !hasAnimated ? "hidden-before-animation" : "stamp-effect"
-            } ${className}`}
+            className={`hidden-before-animation ${className}`}
         >
             {children}
         </span>

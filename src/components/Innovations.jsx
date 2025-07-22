@@ -20,7 +20,7 @@ const innovationsList = [
 
 const Innovations = () => {
     return (
-        <section className="text-center space-y-10">
+        <section className="text-center space-y-10 my-[52px]">
             <div>
                 <h3 className="font-caveat text-[22px] md:text-2xl text-blue-600 tracking-[-1px]">
                     Our innovation
@@ -33,7 +33,7 @@ const Innovations = () => {
                 {innovationsList.map((innovation, index) => (
                     <li
                         key={index}
-                        className="relative flex flex-col justify-between items-center gap-y-7 px-5 pt-7 bg-neutral-50 rounded-xl border border-slate-100"
+                        className="relative flex flex-col justify-between items-center gap-y-7 px-5 pt-7 md:p-10 bg-neutral-50 rounded-xl border border-slate-100"
                     >
                         {index === 0 && (
                             <Image
@@ -61,18 +61,19 @@ const Innovations = () => {
                                     ? innovation.domain
                                     : "⚠️ Coming Soon!"}
                             </Link>
-                            <h3 className="font-semibold text-xl md:text-3xl leading-[30px] md:leading-[38px] tracking-[-0.2px] md:tracking-[-0.6px]">
+                            <h3 className="font-semibold text-xl md:text-3xl md:mt-1 leading-[30px] md:leading-[38px] tracking-[-0.2px] md:tracking-[-0.6px]">
                                 {innovation.title}
                             </h3>
-                            <p className="md:text-lg md:leading-7">
+                            <p className="md:text-lg md:leading-7 md:mt-2">
                                 {innovation.description}
                             </p>
                         </div>
                         <Image
                             src={innovation.image}
-                            width={302}
-                            height={188}
+                            width={435}
+                            height={269}
                             alt={innovation.title}
+                            sizes="(max-width: 767px) 302px, 435px"
                         />
                     </li>
                 ))}

@@ -16,7 +16,7 @@ const taglineItems = [
 
 const Hero = () => {
     return (
-        <section className="relative flex flex-col items-center text-center pt-[72px] md:pt-[104px] pb-2 md:pb-3.5 2xl:pb-7 lg:pb-5 overflow-y-clip">
+        <section className="relative flex flex-col items-center text-center pt-[72px] md:pt-[104px] pb-2 md:pb-3.5 2xl:pb-7 lg:pb-6 overflow-y-clip">
             <AnimatedContent
                 direction="horizontal"
                 reverse={true}
@@ -39,32 +39,32 @@ const Hero = () => {
                     className="hidden lg:block absolute -top-24 -left-28 -rotate-[20deg]"
                 />
                 <Image
-                    src="/meta.png"
+                    src="/meta2.png"
                     width={68.53}
                     height={68.53}
                     alt="meta"
-                    className="lg:hidden border-[6px] border-white rounded-full absolute top-24 md:top-12 -left-11 rotate-6 shadow-[1.71px_1.71px_0px_0px_#00000040]"
+                    className="lg:hidden bg-blue-500 bg-[url('/paper-wrapper.png')] bg-blend-multiply bg-cover bg-center border-[6px] border-white rounded-full absolute top-24 md:top-12 -left-11 rotate-6 shadow-[1.71px_1.71px_0px_0px_#00000040]"
                 />
                 <Image
-                    src="/meta.png"
+                    src="/meta2.png"
                     width={87.56}
                     height={87.56}
                     alt="meta"
-                    className="hidden lg:block border-[6px] border-white rounded-full absolute top-12 -left-11 rotate-6 shadow-[1.71px_1.71px_0px_0px_#00000040]"
+                    className="hidden lg:block -z-10 bg-blue-500 bg-[url('/paper-wrapper.png')] bg-blend-multiply bg-cover bg-center border-[6px] border-white rounded-full absolute top-6 -left-[1.6rem] rotate-6 shadow-[1.71px_1.71px_0px_0px_#00000040]"
                 />
                 <Image
-                    src="/google.png"
+                    src="/google2.png"
                     width={68.53}
                     height={68.53}
                     alt="meta"
-                    className="hidden md:block lg:hidden border-[6px] border-white rounded-full absolute top-80 left-0 -rotate-[8deg] shadow-[1.71px_1.71px_0px_0px_#00000040]"
+                    className="hidden md:block lg:hidden bg-[url('/paper-wrapper.png')] bg-cover border-[6px] border-white rounded-full absolute top-80 left-0 -rotate-[8deg] shadow-[1.71px_1.71px_0px_0px_#00000040]"
                 />
                 <Image
-                    src="/google.png"
+                    src="/google2.png"
                     width={100.91}
                     height={100.91}
                     alt="meta"
-                    className="hidden lg:block border-[6px] border-white rounded-full absolute top-96 -translate-y-2 left-6 -rotate-[8deg] shadow-[1.71px_1.71px_0px_0px_#00000040]"
+                    className="hidden lg:block bg-[url('/paper-wrapper.png')] bg-cover border-[6px] border-white rounded-full absolute top-96 -translate-y-2 left-6 -rotate-[8deg] shadow-[1.71px_1.71px_0px_0px_#00000040]"
                 />
                 <Image
                     src="/clipped-full-shadow.png"
@@ -241,21 +241,20 @@ const Hero = () => {
                     100% satisfied clients
                 </p>
             </div>
-            <div className="bg-orange-500 py-3 -rotate-2 w-[110vw]">
+            <div className="bg-orange-500 bg-[url('/paper-wrapper.png')] bg-blend-multiply bg-cover bg-center py-3 -rotate-2 w-[110vw]">
                 <ScrollVelocity
                     velocity={100}
                     numCopies={4}
-                    className="font-semibold text-xl leading-[30px] tracking-[-0.2px] text-white"
+                    className="font-semibold text-xl md:text-2xl leading-[30px] md:leading-8 tracking-[-0.2px] md:tracking-[-0.5px] text-white"
                     wrapperClassName="translate-x-5"
                 >
                     {taglineItems.map((tagline, index) => (
-                        <li
-                            key={index}
-                            className="flex gap-x-4 items-center shrink-0"
-                        >
+                        <div key={index} className="flex items-center">
                             <p>{tagline}</p>
-                            <Sparkle />
-                        </li>
+                            <i className="px-4">
+                                <Sparkle />
+                            </i>
+                        </div>
                     ))}
                 </ScrollVelocity>
             </div>

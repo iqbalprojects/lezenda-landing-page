@@ -40,7 +40,7 @@ const clientsList = [
 
 const Clients = () => {
     return (
-        <section className="relative p-5 mb-[52px] rounded-[20px] shadow-[1px_1px_1px_0px_#00000026,-0.5px_1px_1px_0px_#0000001A]">
+        <section className="relative p-5 mt-[52px] xl:mt-[100px] mb-[52px] xl:mx-[100px] rounded-[20px] shadow-[1px_1px_1px_0px_#00000026,-0.5px_1px_1px_0px_#0000001A]">
             <Image
                 src="/pinned.png"
                 width={71.3}
@@ -49,7 +49,7 @@ const Clients = () => {
                 className="absolute -left-4"
             />
             <div className="flex flex-col md:flex-row md:gap-[59px]">
-                <div className="flex flex-col items-center text-center md:pt-7">
+                <div className="flex flex-col items-center md:items-start text-center md:pt-7">
                     <h3 className="font-caveat text-[22px] text-center md:text-left w-full md:pl-7 text-blue-600 tracking-[-1px] mb-2">
                         Our clients
                     </h3>

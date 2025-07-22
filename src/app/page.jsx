@@ -9,7 +9,7 @@ import Services from "@/components/Services";
 
 export default function Home() {
     return (
-        <div className="flex flex-col gap-y-[52px] px-5 overflow-hidden">
+        <div className="flex flex-col px-5 overflow-hidden">
             <Hero />
             <Clients />
             <Proccess />

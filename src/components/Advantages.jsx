@@ -6,21 +6,21 @@ import AnimatedContent from "./AnimatedContent";
 
 const Advantages = () => {
     return (
-        <div className="lg:px-5 lg:py-16">
-            <section className="bg-[#1D2146] min-h-screen px-5 py-7 pb-36 md:pb-52 lg:pb-16 lg:pt-16 lg:px-20 space-y-5 text-white rounded-2xl">
+        <div className="lg:px-5 lg:py-16 my-[52px]">
+            <section className="bg-[#1D2146] min-h-screen px-5 py-7 md:pt-12 lg:pb-16 lg:pt-16 lg:px-20 space-y-5 text-white rounded-2xl">
                 <h2 className="text-3xl md:text-5xl px-5 text-center font-semibold leading-[38px] tracking-[-0.6px]">
                     Why choose Lezenda?
                 </h2>
                 <div className="relative">
                     {/* This UL creates the divider lines */}
-                    <ul className="flex flex-col gap-y-[72px] md:gap-y-11 divide-y divide-white/10">
-                        {[...Array(23)].map((_, index) => (
+                    <ul className="flex flex-col gap-y-[72px] md:gap-y-12 divide-y divide-white/10">
+                        {[...Array(24)].map((_, index) => (
                             <li key={index}></li>
                         ))}
                     </ul>
 
                     {/* This UL contains your main content with the grid layout */}
-                    <ul className="grid grid-cols-1 lg:pt-12 md:grid-cols-3 gap-6 px-5 md:gap-x-8 md:gap-y-12 absolute top-0 left-0 w-full h-full">
+                    <ul className="grid grid-cols-1 lg:pt-12 md:grid-cols-3 gap-6 px-5 md:gap-x-8 md:gap-y-12 absolute top-0 left-0 pt-7 w-full h-full">
                         {/* Row 1 - 3 items */}
                         <AnimatedContent
                             direction="horizontal"
@@ -71,13 +71,13 @@ const Advantages = () => {
                             direction="horizontal"
                             hoverRotate={4}
                         >
-                            <li className="relative bg-[#353B6C] rounded-xl py-6 pl-6 -rotate-2">
+                            <li className="relative flex flex-row md:flex-col justify-center items-center bg-[#353B6C] rounded-xl pb-6 pt-0 pl-6 -rotate-2">
                                 <Image
                                     src="/medal.png"
-                                    width={95.3}
-                                    height={95.3}
+                                    width={130}
+                                    height={130}
                                     alt="Medal"
-                                    className="absolute -top-0.5 right-0 rotate-2"
+                                    className="rotate-2 order-1 md:order-0 w-24 h-24 lg:w-32 lg:h-32"
                                 />
                                 <div className="flex items-end justify-center h-full">
                                     <div>

@@ -31,7 +31,7 @@ const proccessList = [
 
 const Proccess = () => {
     return (
-        <section className="flex flex-col items-center gap-y-10">
+        <section className="flex flex-col my-[52px] xl:my-[60px] xl:mx-[140px] items-center gap-y-10">
             <div className="text-center flex flex-col">
                 <h3 className="font-caveat text-[22px] text-blue-600 tracking-[-1px]">
                     The process
@@ -39,7 +39,7 @@ const Proccess = () => {
                 <h2 className="font-bold text-3xl leading-[38px] tracking-[-0.6px] text-[#1D2146]">
                     We help businesses
                     <div className="flex flex-col md:flex-row justify-center gap-x-2 md:mt-1 text-[#1D2146]">
-                        <StampOnView className="mx-auto my-1.5 outline-4 outline-indigo-100 bg-[#242A63] py-0.5 px-2.5 w-fit -rotate-[2.8deg] rounded-lg text-white font-semibold text-[28px] leading-[38px] tracking-[-0.6px]">
+                        <StampOnView className="mx-auto my-1.5 outline-4 outline-indigo-100 bg-[#242A63] py-0.5 md:py-0 px-2.5 w-fit rounded-lg text-white font-semibold text-[28px] leading-[38px] tracking-[-0.6px]">
                             🚀 in every step
                         </StampOnView>
                         of their growth
@@ -58,12 +58,12 @@ const Proccess = () => {
                     {proccessList.map((item, index) => (
                         <li
                             key={index}
-                            className="relative flex flex-col justify-between gap-y-4 md:h-72 bg-neutral-50 rounded-[20px] shadow-[1px_1px_1px_0px_#00000026,-0.5px_1px_1px_0px_#0000001A] p-7"
+                            className="relative flex flex-col justify-between gap-y-4 md:h-[280px] bg-neutral-50 p-7 rounded-[20px] shadow-[1px_1px_1px_0px_#00000026,-0.5px_1px_1px_0px_#0000001A]"
                         >
                             <p className="text-black/10 font-bold text-3xl md:text-5xl leading-[38px] tracking-[-0.6px]">
                                 0{index + 1}
                             </p>
-                            <div className="space-y-0.5">
+                            <div className="space-y-0.5 md:space-y-2">
                                 <h5 className="font-semibold text-lg md:text-2xl leading-[140%]">
                                     {item.title}
                                 </h5>

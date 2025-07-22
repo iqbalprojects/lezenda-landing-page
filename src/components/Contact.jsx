@@ -3,7 +3,10 @@ import Link from "next/link";
 
 const Contact = () => {
     return (
-        <section id="contact-us" className=" bg-[#1D2146] rounded-2xl">
+        <section
+            id="contact-us"
+            className=" bg-[#1D2146] rounded-2xl my-[52px]"
+        >
             <div className="relative">
                 <div className="hidden md:block">
                     <ul className="flex flex-col gap-y-[72px] divide-y divide-white/5">
@@ -27,7 +30,8 @@ const Contact = () => {
                             next move is your best one
                         </p>
                         <Link
-                            href="#"
+                            href="https://wa.me/6285156700100"
+                            target="_blank"
                             className="bg-white grid place-content-center w-fit mx-auto md:mx-0 px-4 h-10 rounded-[10px] font-semibold tracking-[-0.1px]"
                         >
                             Contact Us
@@ -38,7 +42,7 @@ const Contact = () => {
                         width={286}
                         height={211.56}
                         alt="Contact Us"
-                        className="scale-150 xl:scale-200 xl:-translate-x-20"
+                        className="scale-125 lg:scale-150 xl:scale-200 xl:-translate-x-20"
                     />
                 </div>
             </div>
