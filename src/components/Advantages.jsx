@@ -6,7 +6,7 @@ import AnimatedContent from "./AnimatedContent";
 
 const Advantages = () => {
     return (
-        <div className="lg:px-5 lg:py-16 my-[52px]">
+        <div className="lg:px-5 lg:py-16 my-[52px] xl:mt-20 xl:mb-10 xl:mx-[68px]">
             <section className="bg-[#1D2146] min-h-screen px-5 py-7 md:pt-12 lg:pb-16 lg:pt-16 lg:px-20 space-y-5 text-white rounded-2xl">
                 <h2 className="text-3xl md:text-5xl px-5 text-center font-semibold leading-[38px] tracking-[-0.6px]">
                     Why choose Lezenda?

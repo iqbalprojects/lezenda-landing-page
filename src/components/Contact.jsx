@@ -5,7 +5,7 @@ const Contact = () => {
     return (
         <section
             id="contact-us"
-            className=" bg-[#1D2146] rounded-2xl my-[52px]"
+            className=" bg-[#1D2146] rounded-2xl my-[52px] xl:mx-[140px] xl:my-20"
         >
             <div className="relative">
                 <div className="hidden md:block">

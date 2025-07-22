@@ -16,8 +16,8 @@ const footerLinks = [
 
 const Footer = () => {
     return (
-        <footer className="flex flex-col gap-y-[60px] items-center">
-            <div className="py-8 w-full flex flex-col gap-y-[60px] md:flex-row justify-between">
+        <footer className="flex flex-col gap-y-[60px] items-center pt-8 border-t border-t-neutral-300 xl:mx-[140px] xl:pt-[60px]">
+            <div className="px-5 w-full flex flex-col gap-y-[60px] md:flex-row justify-between">
                 <div className="space-y-6">
                     <h2 className="text-zinc-400 text-3xl md:text-5xl leading-[38px] md:leading-[135%] tracking-[-0.6px] md:tracking-[-0.8px]">
                         Get in touch

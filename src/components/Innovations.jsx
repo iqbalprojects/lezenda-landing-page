@@ -20,7 +20,7 @@ const innovationsList = [
 
 const Innovations = () => {
     return (
-        <section className="text-center space-y-10 my-[52px]">
+        <section className="text-center space-y-10 my-[52px] xl:mx-[140px] xl:my-20">
             <div>
                 <h3 className="font-caveat text-[22px] md:text-2xl text-blue-600 tracking-[-1px]">
                     Our innovation

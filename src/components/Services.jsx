@@ -127,7 +127,7 @@ const Services = () => {
     };
 
     return (
-        <section className="relative flex flex-col gap-y-10 my-[52px] items-center">
+        <section className="relative flex flex-col gap-y-10 my-[52px] xl:py-20 xl:px-[140px] md:bg-neutral-50 items-center">
             <motion.div
                 className="hidden md:block absolute top-0 left-0"
                 initial={{ x: -100, opacity: 0 }}
@@ -149,7 +149,7 @@ const Services = () => {
                     </StampOnView>
                 </h2>
             </div>
-            <ul className="md:hidden space-y-5 w-full">
+            <ul className="md:hidden space-y-5 w-full xl:mx-[140px]">
                 {servicesList.map((service, index) => {
                     const isOpen = isOpenStates[index];
                     return (
@@ -249,7 +249,7 @@ const Services = () => {
                     );
                 })}
             </ul>
-            <div className="hidden md:block outline outline-neutral-200 p-4 rounded-[20px] space-y-7 lg:w-[1160px]">
+            <div className="hidden md:block outline outline-neutral-200 p-4 rounded-[20px] space-y-7 lg:w-[1160px] xl:w-full">
                 <ul className="flex gap-3 justify-center flex-wrap">
                     {servicesList.map((service, index) => {
                         return (
