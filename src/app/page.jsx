@@ -10,7 +10,7 @@ import Services from "@/components/Services";
 export default function Home() {
     return (
         <div className="overflow-hidden">
-            <div className="px-5 xl:px-0 overflow-hidden">
+            <div className="px-5 xl:px-0">
                 <Hero />
                 <Clients />
                 <Proccess />

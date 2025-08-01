@@ -35,13 +35,22 @@ const AnimatedContent = ({
         const offset = reverse ? -distance : distance;
         const startPct = (1 - threshold) * 100;
 
-        gsap.set(el, {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: el,
+                start: `top ${startPct}%`,
+                toggleActions: "play none resume reverse",
+            },
+        });
+
+        tl.set(el, {
             [axis]: offset,
             scale,
             opacity: animateOpacity ? initialOpacity : 1,
+            clear: "all",
         });
 
-        gsap.to(el, {
+        tl.to(el, {
             [axis]: 0,
             scale: 1,
             opacity: 1,
@@ -49,12 +58,6 @@ const AnimatedContent = ({
             ease,
             delay,
             onComplete,
-            scrollTrigger: {
-                trigger: el,
-                start: `top ${startPct}%`,
-                toggleActions: "play none none none",
-                once: true,
-            },
         });
 
         const handleEnter = () => {

@@ -10,7 +10,7 @@ const footerLinks = [
     //     href: "#",
     //     text: "Discover our story",
     // },
-    { href: "#", text: "Check domains" },
+    { href: "/domain-availability", text: "Check domains" },
     // { href: "#", text: "Privacy & terms" },
 ];
 
