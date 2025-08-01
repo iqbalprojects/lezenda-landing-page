@@ -30,7 +30,7 @@ const quattrocento = Quattrocento_Sans({
 });
 
 export const metadata = {
-    metadataBase: new URL("http://localhost:3000"),
+    metadataBase: new URL(process.env.BASE_URL),
     title: "Lezenda - Ecommerce Marketing Consultant",
     description: "We help grow brand awareness and increase sales.",
     openGraph: {
