@@ -327,7 +327,7 @@ const Services = () => {
                                     animationDelay: `${sIndex * 100}ms`,
                                 }}
                             >
-                                <ul className="flex space-x-2 mb-2 transition-all duration-300">
+                                <ul className="flex space-x-2 mb-5 transition-all duration-300">
                                     {s.icons.map((icon, iconIndex) => (
                                         <li
                                             key={iconIndex}
@@ -343,10 +343,14 @@ const Services = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                <h5 className="font-medium transition-colors duration-300 hover:text-blue-600"></h5>
-                                <p className="text-sm text-slate-600">
-                                    {s.description}
-                                </p>
+                                <div className="space-y-1">
+                                    <h5 className="font-semibold text-base transition-colors duration-300">
+                                        {s.title}
+                                    </h5>
+                                    <p className="text-sm text-slate-600">
+                                        {s.description}
+                                    </p>
+                                </div>
                             </li>
                         ))
                     ) : (

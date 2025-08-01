@@ -12,6 +12,14 @@ const navItems = [
         title: "Contact Us",
         url: "#contact-us",
     },
+    {
+        title: "Posts",
+        url: "/posts",
+    },
+    {
+        title: "Check Domains",
+        url: "/domain-availability",
+    },
 ];
 
 const Navbar = () => {
