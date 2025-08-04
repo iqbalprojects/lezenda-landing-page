@@ -6,7 +6,7 @@ import AnimatedContent from "./AnimatedContent";
 
 const Advantages = () => {
     return (
-        <div className="lg:px-5 lg:py-16 my-[52px] xl:mt-20 xl:mb-10 xl:mx-[68px]">
+        <div className="lg:px-5 lg:py-2.5 my-[52px] xl:mt-10 xl:mb-10 xl:mx-10">
             <section className="bg-[#1D2146] min-h-screen px-5 py-7 md:pt-12 lg:pb-16 lg:pt-16 lg:px-20 space-y-5 text-white rounded-2xl">
                 <h2 className="text-3xl md:text-5xl px-5 text-center font-semibold leading-[38px] tracking-[-0.6px]">
                     Why choose Lezenda?
@@ -20,10 +20,12 @@ const Advantages = () => {
                                 className={index >= 22 ? "lg:hidden" : ""}
                             ></li>
                         ))}
+                        {/* Extra item that only shows on small screens */}
+                        <li className="md:hidden"></li>
                     </ul>
 
                     {/* This UL contains your main content with the grid layout */}
-                    <ul className="grid grid-cols-1 lg:pt-12 md:grid-cols-3 gap-6 px-5 md:gap-x-8 md:gap-y-12 absolute top-0 left-0 pt-7 w-full">
+                    <ul className="grid grid-cols-1 lg:pt-12 md:grid-cols-3 gap-6 px-5 md:gap-x-8 md:gap-y-12 md:py-14 absolute top-0 left-0 pt-7 w-full">
                         {/* Row 1 - 3 items */}
                         <AnimatedContent
                             direction="horizontal"
@@ -31,7 +33,7 @@ const Advantages = () => {
                             hoverRotate={6}
                             mixBlend={false}
                         >
-                            <li className="bg-[#292C4F] flex flex-col md:justify-center items-center text-center p-6 rounded-xl -rotate-2">
+                            <li className="bg-[#292C4F] flex flex-col md:justify-center items-center text-center p-9 rounded-xl -rotate-2 h-full md:p-1">
                                 <div className="flex items-center gap-x-2 mb-1.5">
                                     <WatchIcon className="rotate-2" />
                                     <span className="text-white">+</span>
@@ -49,7 +51,7 @@ const Advantages = () => {
                         </AnimatedContent>
 
                         <AnimatedContent hoverRotate={-12} mixBlend={false}>
-                            <li className="relative md:flex md:flex-col md:items-center md:justify-center md:space-y-6 bg-[#DD5F11] space-y-1.5 rounded-xl p-6 pr-7 rotate-[3.7deg]">
+                            <li className="relative md:flex md:flex-col md:items-center md:justify-center md:space-y-6 bg-[#DD5F11] space-y-1.5 rounded-xl p-6 pr-7 rotate-[3.7deg] h-full -translate-y-2 md:-translate-y-4 lg:-translate-y-6">
                                 <Image
                                     src="/pinned.png"
                                     width={86.71}

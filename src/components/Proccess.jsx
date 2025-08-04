@@ -35,10 +35,10 @@ const Proccess = () => {
                 <h3 className="font-caveat text-[22px] text-blue-600 tracking-[-1px]">
                     The process
                 </h3>
-                <h2 className="font-bold text-3xl leading-[38px] tracking-[-0.6px] text-[#1D2146]">
+                <h2 className="font-bold text-3xl md:text-5xl leading-[38px] md:leading-16 tracking-[-0.6px] text-[#1D2146]">
                     We help businesses
                     <div className="flex flex-col md:flex-row justify-center gap-x-2 md:mt-1 text-[#1D2146]">
-                        <StampOnView className="mx-auto my-1.5 outline-4 outline-indigo-100 bg-[#242A63] py-0.5 md:py-0 px-2.5 w-fit rounded-lg text-white font-semibold text-[28px] leading-[38px] tracking-[-0.6px]">
+                        <StampOnView className="mx-auto my-1.5 md:my-4 outline-4 outline-indigo-100 bg-[#242A63] py-0.5 md:py-3 px-2.5 w-fit rounded-lg text-white font-semibold text-[28px] md:text-5xl leading-[38px] tracking-[-0.6px]">
                             🚀 in every step
                         </StampOnView>
                         of their growth

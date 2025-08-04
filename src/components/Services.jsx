@@ -127,9 +127,9 @@ const Services = () => {
     };
 
     return (
-        <section className="relative flex flex-col gap-y-10 my-[52px] xl:py-20 xl:px-[140px] md:bg-neutral-50 items-center">
+        <section className="relative flex flex-col gap-y-10 my-[52px] md:py-14 md:px-10 mb-2.5 xl:py-20 xl:px-[140px] md:bg-neutral-50 items-center">
             <motion.div
-                className="hidden md:block absolute top-0 left-0"
+                className="hidden md:block absolute top-12 left-16 md:top-16 md:left-10"
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
@@ -142,9 +142,9 @@ const Services = () => {
                 <h3 className="font-caveat text-2xl text-blue-600 tracking-[-1px]">
                     Our services
                 </h3>
-                <h2 className="font-bold text-3xl leading-[38px] tracking-[-0.6px]">
+                <h2 className="font-bold text-3xl leading-[38px] tracking-[-0.6px] md:text-5xl">
                     Complete end to end
-                    <StampOnView className="block mx-auto my-1.5 outline-4 outline-indigo-100 bg-indigo-900 py-0.5 px-2.5 w-fit rounded-lg text-white font-semibold text-[28px] leading-[38px] tracking-[-0.6px]">
+                    <StampOnView className="block mx-auto my-1.5 md:mt-4 outline-4 outline-indigo-100 bg-indigo-900 py-0.5 md:py-3 px-2.5 w-fit rounded-lg text-white font-semibold text-[28px] leading-[38px] tracking-[-0.6px] md:text-5xl">
                         🌐 digital solutions
                     </StampOnView>
                 </h2>
